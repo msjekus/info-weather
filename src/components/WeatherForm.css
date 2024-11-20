@@ -1,0 +1,11 @@
+.weather{
+    margin-left: 50px;
+}
+h1 {
+    text-align: center;
+}
+.seting{
+    position: absolute;
+    top: 0px; right: 50px;
+    text-align: right;
+}
