@@ -91,7 +91,7 @@ const WeatherForm = () => {
                     <h3>Введіть назву вашої країни:</h3>
                     <input type="text" ref={inpCoutry} className="form-control my-3" placeholder="Наприклад: Україна"></input>
                 </div>
-                <button type="button" className="btn btn-outline-success" onClick={clickHandle}>ПОГОДА</button>
+                <button type="button" className="btn btn-outline-success" onClick={clickHandle}>Отримати</button>
 
 
                 {error && <p className="text-danger mt-3">{error}</p>}
