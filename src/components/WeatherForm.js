@@ -7,6 +7,7 @@ const WeatherForm = () => {
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null);
     const [thema, setThema] = useState("day");
+    const [showSettings, setShowSettings]=useState(false);
     const [settings, setSettings] = useState({
         textColor: "#636363",
         backgroundColor: "#d9d9d9",
@@ -114,6 +115,14 @@ const WeatherForm = () => {
 
                 )}
             </div>
+            <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            checked={showSettings}
+            onChange={() => setShowSettings(!showSettings)}
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault">Показати налаштування</label>
+            </div>
+            {showSettings && (
             <div className="seting">
                 <h3 className="mt-5">Налаштування</h3>
 
@@ -130,12 +139,10 @@ const WeatherForm = () => {
                         onChange={handleSettingsChange} className="form-control mb-3" />
                 </div>
                 <button className="btn btn-outline-primary" onClick={saveSettings}>Зберегти</button>
-
-
             </div>
 
-
+            )}
         </div>
-    )
+    );
 }
 export default WeatherForm;
